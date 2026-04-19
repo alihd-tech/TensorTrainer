@@ -1,6 +1,17 @@
-# Danamam — Buddy Maker
+# Danamam - TensorTrainer
 
-Danamam is a **browser-only trainer** for a small conversational “buddy.” You add question–answer pairs, train a lightweight classifier on top of sentence embeddings, then chat and optionally **export the trained weights** as JSON.
+[![Nuxt 3](https://img.shields.io/badge/Nuxt-3-00DC82?style=flat-square&logo=nuxt.js&logoColor=white)](https://nuxt.com/)
+[![Vue 3](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/js)
+[![Universal Sentence Encoder](https://img.shields.io/badge/Universal_Sentence_Encoder-4285F4?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder)
+[![Nuxt UI](https://img.shields.io/badge/Nuxt_UI-2-00DC82?style=flat-square&logo=nuxt.js&logoColor=white)](https://ui.nuxt.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Pinia](https://img.shields.io/badge/Pinia-ffd859?style=flat-square&logo=pinia&logoColor=000000)](https://pinia.vuejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://opensource.org/licenses/MIT)
+
+**Danamam - TensorTrainer** is a **browser-only trainer** for a small conversational buddy. You add question–answer pairs, train a lightweight classifier on top of sentence embeddings, then chat and optionally **export the trained weights** as JSON.
 
 No server-side AI is required: **TensorFlow.js** and **[Universal Sentence Encoder](https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder)** run entirely in the client.
 
@@ -34,9 +45,9 @@ This is **answer selection**, not open-ended text generation: replies always com
 | Layer | Technology |
 |--------|------------|
 | Framework | [Nuxt 3](https://nuxt.com/) |
-| UI | [Nuxt UI](https://ui.nuxt.com/) + Tailwind |
+| UI | [Nuxt UI](https://ui.nuxt.com/) + Tailwind CSS |
 | ML | [TensorFlow.js](https://www.tensorflow.org/js), [@tensorflow-models/universal-sentence-encoder](https://www.npmjs.com/package/@tensorflow-models/universal-sentence-encoder) |
-| State (module) | [Pinia](https://pinia.vuejs.org/) via `@pinia/nuxt` (ready for stores; main flow lives in `app.vue`) |
+| State | [Pinia](https://pinia.vuejs.org/) via `@pinia/nuxt` (ready for stores; main flow lives in `app.vue`) |
 
 ---
 
@@ -50,8 +61,8 @@ This is **answer selection**, not open-ended text generation: replies always com
 ## Installation
 
 ```bash
-git clone <your-repo-url> danamam-trainer
-cd danamam-trainer
+git clone <your-repo-url> danamam-tensor-trainer
+cd danamam-tensor-trainer
 npm install
 ```
 
@@ -88,7 +99,7 @@ npm run preview
 npm run generate
 ```
 
-Output can be deployed to static hosts (e.g. Netlify, Cloudflare Pages, GitHub Pages, Vercel). Ensure hosting supports **client-side** WASM/JS assets used by TensorFlow.js and the sentence encoder CDN fetches.
+Output can be deployed to static hosts (for example Netlify, Cloudflare Pages, GitHub Pages, or Vercel). Ensure hosting supports **client-side** WASM and JavaScript assets used by TensorFlow.js and CDN fetches for the sentence encoder.
 
 ---
 
@@ -99,9 +110,9 @@ The download includes:
 - **`architecture`** — `model.toJSON()` from TensorFlow.js  
 - **`weights`** — serialized weight tensors  
 - **`answers`** — ordered list of unique answer strings (output index alignment)  
-- **`metadata`** — e.g. ISO timestamp and pair count  
+- **`metadata`** — for example ISO timestamp and pair count  
 
-Importing this file back into an app is **not** implemented in this repo; the export is for backup, experimentation, or a custom loader you build.
+Importing this file back into an app is **not** implemented in this repository; the export is for backup, experimentation, or a custom loader you build.
 
 ---
 
@@ -144,6 +155,6 @@ MIT License
 
 ---
 
-## Idea in one line
+## One-line pitch
 
-**Let people shape a tiny, personal responder in the browser—no API keys, no backend ML stack—just pairs, embeddings, and a small trainable head.**
+**Shape a tiny, personal responder in the browser—no API keys, no backend ML stack—just pairs, embeddings, and a small trainable head.**

@@ -1,15 +1,13 @@
 {
-  "name": "danamam-trainer",
+  "name": "tensor-trainer",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "pnpm run build && wrangler dev",
-    "postinstall": "nuxt prepare",
-    "deploy": "pnpm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "preview": "pnpm run build",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@nuxt/ui": "^2.14.2",
@@ -20,7 +18,6 @@
     "pinia": "^2.1.7"
   },
   "devDependencies": {
-    "@iconify-json/heroicons": "^1.2.2",
-    "wrangler": "^4.83.0"
+    "@iconify-json/heroicons": "^1.2.2"
   }
 }

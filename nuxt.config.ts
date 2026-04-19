@@ -3,14 +3,12 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ['~/assets/css/main.css'],
 
+  modules: ["@nuxt/ui"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-
-  nitro: {
-    preset: "cloudflare-pages"
-  }
 })
